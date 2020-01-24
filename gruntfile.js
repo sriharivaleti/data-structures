@@ -71,6 +71,34 @@ module.exports = grunt => {
       }
     },
 
+    jshint: {
+      options: {
+        curly: false,
+        eqeqeq: true,
+        immed: true,
+        esnext: true,
+        latedef: "nofunc",
+        newcap: true,
+        noarg: true,
+        sub: true,
+        undef: true,
+        eqnull: true,
+        browser: true,
+        expr: true,
+        loopfunc: true,
+        globals: {
+          head: false,
+          module: false,
+          console: false,
+          unescape: false,
+          define: false,
+          exports: false,
+          require: false
+        }
+      },
+      files: ["gruntfile.js", "js/reveal.js"]
+    },
+
     connect: {
       server: {
         options: {
@@ -136,7 +164,7 @@ module.exports = grunt => {
   grunt.registerTask("default", ["css", "js"]);
 
   // JS task
-  grunt.registerTask("js", ["uglify", "qunit"]);
+  grunt.registerTask("js", ["jshint", "uglify", "qunit"]);
 
   // Theme CSS
   grunt.registerTask("css-themes", ["sass:themes"]);
@@ -154,5 +182,5 @@ module.exports = grunt => {
   grunt.registerTask("serve", ["connect", "watch"]);
 
   // Run tests
-  grunt.registerTask("test", ["qunit"]);
+  grunt.registerTask("test", ["jshint", "qunit"]);
 };
