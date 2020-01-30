@@ -1,29 +1,26 @@
 {
-  "name": "javascript_lecture_two_data_structures",
-"private": true,
+  "name": "javascript-lecture-two-data-structures",
+  "private": true,
   "version": "3.8.0",
   "description": "",
   "homepage": "",
-  "main": "",
+  "main": "index.js",
   "scripts": {
-    "clean": "rimraf dist && mkdir dist",
-    "prebuild": "cp index.html dist/",
-    "build": "cp -R plugin lib js images css dist/",
-    "postbuild": "gh-pages -d dist"
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "cp -R plugin lib js css dist/ && cp index.html dist/",
+    "deploy": "gh-pages -d dist"
   },
   "author": {
-    "name": "Maria D. Camp
-bell",
+    "name": "Maria D. Camp dbell",
     "email": "interglobalmedia@gmail.com"
   },
   "repository": {
     "type": "git",
     "url": ""
   },
-  "engines": {
-    "node": ">=9.0.0"
-  },
-  "devDependencies": {
-  },
-  "license": "MIT"
+  "devDependencies": {},
+  "license": "MIT",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
 }
