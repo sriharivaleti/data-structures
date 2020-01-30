@@ -34,14 +34,17 @@
             <section class="section">
                 <h2>JavaScript Data Types</h2>
                 <p>
-                    There are 8 JavaScript data types (you learned about 7 of them for homework). 7
+                    There are <code>8</code> JavaScript <code>data types</code> (you learned about 7 of them for
+                    homework). 7
                     <code>primitive</code> types, and one <code>object</code> type.
                 </p>
             </section>
             <section class="section">
                 <h2>Primitive JavaScript Data Types</h2>
                 <p>
-                    Primitive data types (primitive value, primitive data type) is data that has no object and no
+                    Primitive data types (<code>primitive value</code>, <code>primitive data type</code>) is data that
+                    has no object
+                    and no
                     methods.
                 </p>
                 <p>
@@ -63,22 +66,28 @@
             <section class="section">
                 <h2>Primitive JavaScript Data Types: string</h2>
                 <p>
-                    The string primitive data type, which you have already encountered, looks like so:
+                    The <code>string</code> primitive data type, which you have already encountered, looks like so:
                 </p>
                 <code>'Maria'</code> or <code>"Maria"</code> or <code>`Maria`</code>.
                 <p>
-                    string is used to represent text data. Each string is made up of a <code>set</code> of "elements" of
+                    <code>String</code> is used to represent <code>text data</code>. Each string is made up of a
+                    <code>set</code> of
+                    "elements" of
                     16-bit unsigned
-                    integer values (the indexes). That means that each element occupies a position in the String. The
+                    integer values (the indexes). That means that each element occupies a <code>position</code> in the
+                    <code>String</code>. The
                     first element is
-                    at index 0, the second at index 1, etc. The length of the String is the number of elements in it.
+                    at index 0, the second at index 1, etc. The <code>length</code> of the <code>String</code> is the
+                    number of
+                    elements in it.
                 </p>
                 <p>
-                    JavaScript strings are immutable. Once created, they cannot be changed. BUT, it is possible to
+                    JavaScript strings are <code>immutable</code>. Once created, they cannot be changed. BUT, it is
+                    possible to
                     create another string
-                    based on an operation on the original string: a substring of the original by using
+                    based on an operation on the original string: a <em>substring</em> of the original by using
                     <code>String.substr()</code> or
-                    concatenating strings with <code>String.concat()</code>.
+                    <code>concatenating</code> strings with <code>String.concat()</code>.
                 </p>
                 <aside class="notes">
                     Show primitive data type string in action in JS playground. Show how trying to change the string
@@ -93,14 +102,15 @@
             </section>
             <section class="section">
                 <h2>Primitive JavaScript Data Types: <code>Number</code></h2>
-                <ol>
+                <ul>
                     <li>
-                        The Number type is a double-precision 64-bit binary format IEEE 754 value (numbers between
+                        The Number type is a <code>double-precision</code> 64-bit binary format IEEE 754 value (numbers
+                        between
                         -(2<sup>53</sup> - 1)
                         and 2<sup>53</sup> - 1)
                     </li>
                     <li>
-                        Number can represent floating-point numbers.
+                        Number can represent <code>floating-point</code> numbers.
                     </li>
                     <li>
                         The number type has 3 <code>symbolic values</code>: <code>+Infinity, -Infinity, and NaN</code>.
@@ -122,9 +132,10 @@
                         <code>-0</code> and
                         <code>+ 0</code>. <code>0</code> is an alias for <code>+0</code>. This usually does not matter,
                         as <code>-0 ===
-                            +0</code>. The only time you might notice something different is when you divide by 0.
+                            +0</code>. The only time you might notice something different is when you <em>divide</em> by
+                        0.
                     </li>
-                </ol>
+                </ul>
                 <aside class="notes">
                     Show an example of this with +0 and -0 in the JS playground to demonstrate how it affects Infinity.
                     Also, go to <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
@@ -149,22 +160,31 @@
             </section>
             <section class="section">
                 <h2>Primitive JavaScript Data Types: Number (contd)</h2>
-                <p>There is only one integer in the number type that is represented twice, and that is 0. There is -0
-                    and +0. 0 really stands for +0.</p>
+                <p>There is <em>only one integer</em> in the <code>number type </code>that is <code>represented
+                        twice</code>, and
+                    that is <code>0</code>.
+                    There is <code>-0</code>
+                    and <code>+0</code>. <code>0</code> really stands for <code>+0</code>.</p>
                 <aside class="notes">
-                    Show an example of this with +0 and -0 in the JS playground to demonstrate how it affects Infinity.
+                    Show an example of this with <code>+0</code> and <code>-0</code> in the JS playground to demonstrate
+                    how it
+                    affects Infinity.
                 </aside>
             </section>
             <section class="section">
                 <h2>Primitive JavaScript Data Types: BigInt</h2>
                 <ul>
                     <li>
-                        <code>BigInt</code> is a number type that can represent integers beyond the safe integer limit
+                        <code>BigInt</code> is a <code>number type</code> that can represent integers beyond the
+                        <code>safe
+                            integer limit</code>
                         for Numbers.
                     </li>
 
                     <li>
-                        <code>BigInt</code> is created by appending <code>n</code> to the end of an integer or by
+                        <code>BigInt</code> is created by appending <code>n</code> to the <em>end</em> of an
+                        <code>integer</code> or
+                        by
                         calling the
                         constructor.
                     </li>
@@ -190,9 +210,11 @@
             <section class="section">
                 <h2>Primitive JavaScript Data Types: symbol</h2>
                 <p>
-                    Symbols are new to JavaScript since ECMAScript 2015. A Symbols is a <b>unique</b> and
-                    <b>immutable</b> primitive
-                    value and may be used as the key of an Object property. In some programming languages, Symbols are
+                    <code>Symbols</code> are new to JavaScript since <code>ECMAScript 2015</code>. A Symbol is a
+                    <strong>unique</strong> and
+                    <strong>immutable</strong> primitive
+                    value and may be used as the key of an Object property. In some programming languages,
+                    <code>Symbols</code> are
                     called "atoms".
                 </p>
                 <p>Syntax:</p>
@@ -221,7 +243,9 @@
                     >The <code>value null</code> represents the <code>absence</code> of any object value.</li>
                     <li>it is treated as <code>falsy</code> for any <code>boolean operations</code>.</li>
                     <li>
-                        <code>null</code> is not written as an identifier for a property of the global object, like
+                        <code>null</code> is not written as an identifier for a <code>property</code> of the
+                        <code>global
+                            object</code>, like
                         <code>undefined</code> can be.
                     </li>
                     <li>
