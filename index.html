@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+    <title>COMD3663 Dynamic Web 1: JavaScript Data Types</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/reveal.css">
@@ -28,7 +28,10 @@
 <body>
     <div class="reveal">
         <div class="slides">
-            <section class="section stretch">
+            <section class="section">
+                <h1>COMD3663 Dynamic Web 1: JavaScript Data Types</h1>
+            </section>
+            <section class="section">
                 <h2>JavaScript Data Types</h2>
                 <p>
                     There are 8 JavaScript data types (you learned about 7 of them for homework). 7
@@ -86,10 +89,10 @@
             </section>
             <section>
                 <h2>Primitive JavaScript Data Types: number</h2>
-                <p>JavaScript has two built in number types: BigInt and Number.</p>
+                <p>JavaScript has two built in number types: <code>BigInt</code> and <code>Number</code>.</p>
             </section>
             <section class="section">
-                <h2>Primitive JavaScript Data Types: Number</h2>
+                <h2>Primitive JavaScript Data Types: <code>Number</code></h2>
                 <ol>
                     <li>
                         The Number type is a double-precision 64-bit binary format IEEE 754 value (numbers between
@@ -156,26 +159,29 @@
                 <h2>Primitive JavaScript Data Types: BigInt</h2>
                 <ul>
                     <li>
-                        BigInt is a number type that can represent integers beyond the safe integer limit for Numbers.
+                        <code>BigInt</code> is a number type that can represent integers beyond the safe integer limit
+                        for Numbers.
                     </li>
 
                     <li>
-                        BigInt is created by appending <code>n</code> to the end of an integer or by calling the
+                        <code>BigInt</code> is created by appending <code>n</code> to the end of an integer or by
+                        calling the
                         constructor.
                     </li>
                     <li>
-                        With the introduction of BigInts, you can operate beyond the Number.max_safe_integer
-                        (max_safe_integer should be
-                        in caps).
+                        With the introduction of <code>BigInt</code>s, you can operate beyond the
+                        <code>Number.MAX_SAFE_INTEGER</code>.
                     </li>
                     <li>
                         You can use <code>+</code>, <code>*</code>, <code>-</code>, <code>**</code>, and <code>%</code>
-                        with BigInts -
-                        just like with <code>Number</code>s. A BigInt is not <i>strictly</i> equal to a Number, only
+                        with <code>BigInt</code>s -
+                        just like with <code>Number</code>s. A <code>BigInt</code> is not <i>strictly</i> equal to a
+                        Number, only
                         loosely so.
                     </li>
                     <li>
-                        A BigInt behaves like a number in cases where it is converted to <code>Boolean</code> with
+                        A <code>BigInt</code> behaves like a number in cases where it is converted to
+                        <code>Boolean</code> with
                         <code>if</code>,
                         <code>||</code>, <code>&&</code>, <code>Boolean</code>, and <code>!</code>.
                     </li>
@@ -211,18 +217,24 @@
             <section class="section">
                 <h2>Primitive JavaScript Data Types: null</h2>
                 <ul>
-                    <li>The null type as only one value: <code>null</code>.</li>
-                    <li>The value null represents the absence of any object value.</li>
-                    <li>it is treated as falsy for any boolean operations.</li>
+                    <li>The <code>null type</code> as only one value: <code>null</code>.</li>
+                    >The <code>value null</code> represents the <code>absence</code> of any object value.</li>
+                    <li>it is treated as <code>falsy</code> for any <code>boolean operations</code>.</li>
                     <li>
-                        null is not written as an identifier for a property of the global object, like undefined can be.
+                        <code>null</code> is not written as an identifier for a property of the global object, like
+                        <code>undefined</code> can be.
                     </li>
                     <li>
-                        null express a lack of identification and absence of value. This means and indicates that a
+                        <code>null</code> expresses a <code>lack</code> of <code>identification</code> and
+                        <code>absence</code> of
+                        <code>value</code>. This
+                        means and
+                        indicates that a
                         variable is not
-                        pointing to any object whatsover.
+                        pointing to any object whatsoever.
                     </li>
-                    <li>In APIs, null is found where an object is expected but not there.</li>
+                    <li>In <code>APIs</code>, <code>null</code> is <code>found</code> where an object is expected but
+                        not there.</li>
                 </ul>
             </section>
             <section class="section">
@@ -230,28 +242,36 @@
                 <ul>
                     <li>
                         A <code>falsy value</code> is a value that is considered <code>false</code> when encountered in
-                        a Boolean
+                        a <code>Boolean</code>
                         context.
                     </li>
                     <li>
-                        And referring to the previous slide, JavaScript uses Type Conversion behind the scenes to coerce
-                        any value to a
-                        Boolean in contexts that require it, such as conditionals and loops.
+                        And referring to the previous slide, JavaScript uses <code>Type Conversion</code> behind the
+                        scenes to <code>coerce</code>
+                        any <code>value</code> to a
+                        <code>Boolean</code> in contexts that require it, such as <code>conditionals</code> and
+                        <code>loops</code>.
                     </li>
                 </ul>
             </section>
             <section class="section">
                 <h2>falsy Values</h2>
-                <p>There are 7 falsy values in JavaScript:</p>
+                <p>There are <code>7 falsy values</code> in JavaScript:</p>
                 <ul>
-                    <li>false: the keyword false</li>
-                    <li>0: the number 0</li>
-                    <li>0n: BigInt, when used as a boolean, follows the same rule as a Number. 0n is falsy.</li>
-                    <li>"", '', ``: This is an empty string (three different representationsas discussed in the string
-                        primitive). The
-                        length of the string is 0, which means that it indeed is empty.</li>
-                    <li>null: the absence of any value, as discussed in slide on mull.</li>
-                    <li>undefined: refers to when something is undefined, and refers to the primitve value.</li>
+                    <li><code>false</code>: the keyword false</li>
+                    <li><code>0</code>: the number 0</li>
+                    <li><code></code>0n</code>: <code>BigInt</code>, when used as a <code>boolean</code>, follows the
+                        same rule as a
+                        Number. <code>0n</code> is <code>falsy</code>.</li>
+                    <li>"", '', ``: This is an empty string (three different representations as discussed in the
+                        <code>string
+                            primitive</code>). The
+                        <code>length</code> of the string is <code>0</code>, which means that it indeed is empty.</li>
+                    <li><code>null</code>: the absence of any value, as discussed in slide on <code>null</code>.</li>
+                    <li><code>undefined</code>: refers to when something is <code>undefined</code>, and refers to the
+                        <code>primitive
+                            value</code>.
+                    </li>
                     <li>NaN: not a number.</li>
                 </ul>
             </section>
@@ -259,15 +279,24 @@
                 <h2>The JavaScript global object</h2>
                 <ul>
                     <li>
-                        In JavaScript, there is always a global object defined and present. In a web browser, when
+                        In <code>JavaScript</code>, there is always a <code>global object</code> defined and present. In
+                        a web
+                        browser, when
                         scripts create global
-                        objects, they become a part of the global object. (In Node.js, this is not the case.)
+                        objects, they become a part of the <code>global object</code>. (In <code>Node.js</code>, this is
+                        not the
+                        case.)
                     </li>
                     <li>
-                        The Window object is the Global Object in a web browser. Any global variables or functions can
-                        be accessed as
-                        properties of the window object. As I mentioned earlier, we'll get more into depth about the
-                        Window object a bit
+                        The <code>Window</code> object is the <code>Global</code> Object in a <code>web browser</code>.
+                        Any global
+                        variables or
+                        functions can
+                        be <code>accessed</code> as
+                        <code>properties</code> of the <code>window</code> object. As I mentioned earlier, we'll get
+                        more into depth
+                        about the
+                        <code>Window</code> object a bit
                         later in the course
                     </li>
                 </ul>
@@ -278,19 +307,19 @@
                 </aside>
             </section>
             <section class="section">
-                <h2>Primitive JavaScript Data Types: undefined</h2>
+                <h2>Primitive JavaScript Data Types: <code>undefined</code></h2>
                 <ul>
                     <li>
-                        A variable that has not been assigned a value has the value undefined.
+                        A variable that has not been assigned a value has the value <code>undefined</code>.
                     </li>
-                    <li>undefined is a property of the global object.</li>
+                    <li><code>undefined</code> is a <code>property</code> of the <code>global object</code>.</li>
                 </ul>
-                <p>We'll get more into undefined later.</p>
+                <p>We'll get more into <code>undefined</code> later.</p>
             </section>
             <section class="section">
-                <h2>Difference Between null and defined: Working Demonstration</h2>
+                <h2>Difference Between <code>null</code> and <code>undefined</code>: Working Demonstration</h2>
                 <p><code>typeof null</code>: object (not null for legacy reasons)</p>
-                <p><code>typeofundefined</code>: undefined</p>
+                <p><code>typeof undefined</code>: undefined</p>
                 <p><code>null === undefined</code>: false</p>
                 <p><code>null == undefined</code>: true</p>
                 <p><code>null === null</code>: true</p>
@@ -300,40 +329,51 @@
                 <p><code>isNaN(1 + undefined)</code>: true</p>
             </section>
             <section class="section">
-                <h2>JavaScript Data Types: object</h2>
+                <h2>JavaScript Data Types: <code>object</code></h2>
                 <p>
-                    In computer science, an object is a value in memory which could be referenced by an identifier.
+                    In computer science, an <code>object</code> is a value in memory which could be referenced by an
+                    <code>identifier</code>.
                 </p>
                 <aside class="notes">
                     Ask the students to explain to me what the identifier is.
                 </aside>
             </section>
             <section class="section">
-                <h2>JavaScript Data Types: object (contd)</h2>
+                <h2>JavaScript Data Types: <code>object</code> (contd)</h2>
                 <ul>
                     <li>
-                        In JavaScript, objects can be regarded as a collection of properties.
+                        In JavaScript, objects can be regarded as a <code>collection</code> of <code>properties</code>.
                     </li>
                     <li>
-                        With the object literal syntax, a limited set of properties can be intialized, then later
+                        With the <code>object literal syntax</code>, a limited set of properties can be initialized,
+                        then
+                        later
                         removed or added.
                     </li>
                     <li>
-                        Property values can be of any type or other objects. This means being able to build complex data
+                        <code>Property values</code> can be of any type or other objects. This means being able to build
+                        complex data
                         structures,
                         unlike with primitives such as strings.
                     </li>
                     <li>
-                        Properties are defined using key values. A key <i>value</i> is either a String or a Symbol
+                        <code>Properties</code> are <code>defined</code> using <code>key values</code>. A <code>key
+                            value</code> is either
+                        a <code>String</code> or a
+                        <code>Symbol</code>
                         value.
                     </li>
                     <li>
-                        Object properties (aka keys) can be any string, including an empty one.
+                        <code>Object properties</code> (aka keys) can be any string, including an empty one.
                     </li>
                     <li>
-                        Property names which are NOT valid identifiers or numbers cannot be accessed with a dot (.)
+                        <code>Property names</code> which are NOT valid <code>identifiers</code> or numbers cannot be
+                        accessed with a
+                        dot (.)
                         property, but can be
-                        set with the array like notation <code>['']</code> and encapsulated by single or double quotes.
+                        set with the <code>array like notation</code> <code>['']</code> and encapsulated by
+                        <code>single</code> or
+                        <code>double quotes</code>.
                     </li>
                 </ul>
                 <aside class="notes">
@@ -341,7 +381,7 @@
                 </aside>
             </section>
             <section class="section">
-                <h2>JavaScript Data Types: types of object properties</h2>
+                <h2>JavaScript Data Types: <code>types</code> of <code>object properties</code></h2>
                 <p>
                     There are two types of object properties which have certain attributes; the <code>data
                         property</code> and the <code>accessor</code> property.
@@ -350,32 +390,40 @@
             <section class="section">
                 <h2>JavaScript Data Types: object Data Property</h2>
                 <p>
-                    Associates a key with a value. To view all the attributes associated with the Data property of an
-                    object, please
+                    Associates a <code>key</code> with a <code>value</code>. To view all the <code>attributes</code>
+                    associated with
+                    the <code>Data
+                        property</code> of an
+                    <code>object</code>, please
                     visit <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures"
                         target="_blank">Data
                         property</a>. The actual <code>Attribute</code>(s) are actually used by the JavaScript <a
                         href="https://en.wikipedia.org/wiki/V8_(JavaScript_engine)" target="_blank">V8 Engine</a>, so
                     developers can't
-                    access <code>Attribute</code>. However, they can use the Object.defineProperty() built in method,
+                    access <code>Attribute</code>. However, they can use the <code>Object.defineProperty()</code> built
+                    in method,
                     which is really <a
                         href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty"
                         target="_blank">cool</a>.
                 </p>
             </section>
             <section class="section">
-                <h2>JavaScript Data Types: object: Object.defineProperty()</h2>
+                <h2>JavaScript Data Types: object: <code>Object.defineProperty()</code></h2>
                 <p>
-                    The (static) method Object.defineProperty() defines a new object property directly on an object OR
+                    The (static) method <code>Object.defineProperty()</code> defines a <code>new</code> object property
+                    directly on
+                    an object OR
                     modifies an
-                    existing property on an object and returns the object. This method is called directly on the Object
-                    constructor and
-                    not on an instance of type Object. We'll get into that more later when we get deeper into the object
+                    existing property on an object and returns the object. This method is called directly on the
+                    <code>Object
+                        constructor</code> and
+                    not on an instance of type <code>Object</code>. We'll get into that more later when we get deeper
+                    into the object
                     type.
                 </p>
             </section>
             <section>
-                <h2>JavaScript Data Types: object: Object.defineProperty() Syntax</h2>
+                <h2>JavaScript Data Types: object: <code>Object.defineProperty()</code> Syntax</h2>
                 <p><b>Syntax:</b></p>
                 <p><code>Object.defineProperty(obj, prop, descriptor):</code></p>
                 <p><b>Parameters:</b></p>
@@ -389,30 +437,38 @@
                 </aside>
             </section>
             <section>
-                <h2>JavaScript Data Types: object: Accessor Property</h2>
+                <h2>JavaScript Data Types: object: <code>Accessor Property</code></h2>
                 <p>
-                    Associates a key with one of two accessor functions, get and set, to retrieve or store a value.
+                    Associates a <code>key</code> with one of two <code>accessor functions</code>, get and set, to
+                    retrieve or store
+                    a value.
                 </p>
                 <p>
                     Again, the actual <code>Attribute</code>(s) are actually used by the JavaScript <a
                         href="https://en.wikipedia.org/wiki/V8_(JavaScript_engine)" target="_blank">V8 Engine</a>, so
                     developers can't
-                    access <code>Attribute</code>. However, they can use the Object.defineProperty() built in method,
+                    access <code>Attribute</code>. However, they can use the <code>Object.defineProperty()</code> built
+                    in method,
                     which is really <a
                         href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty"
                         target="_blank">cool</a>
                 </p>
             </section>
             <section class="section">
-                <h2>JavaScript Data Structures: regular objects, functions and dates</h2>
+                <h2>JavaScript Data Structures: regular <code>objects</code>, <code>functions</code> and
+                    <code>dates</code></h2>
                 <ul>
                     <li>
-                        A JavaScript <b>object</b> is a mapping between keys and values. Keys are strings or Symbols,
+                        A JavaScript <code>object</code> is a <code>mapping</code> between <code>keys</code> and
+                        <code>values</code>.
+                        Keys are
+                        <code>strings</code> or <code>Symbols</code>,
                         and values can be anything.
                     </li>
                     <li><b>Functions</b> are objects that are also callable.</li>
                     <li>
-                        <b>The Date object:</b> when representing dates, it is best to use the built in JavaScript Date
+                        <code>The Date object</code>: when representing dates, it is best to use the built in JavaScript
+                        Date
                         object:
                         <code>const date = new Date()</code>
                     </li>
@@ -420,30 +476,40 @@
             </section>
             <section class="section">
                 <h2>
-                    JavaScript Data Structures: Indexed Collections: Arrays and Typed Arrays
+                    JavaScript Data Structures: <code>Indexed Collections</code>: <code>Arrays</code> and <code>Typed
+                        Arrays</code>
                 </h2>
                 <ul>
                     <li>
-                        Arrays are regular objects in which there is a relationship between integer-keyed properties and
+                        <code>Arrays</code> are regular objects in which there is a relationship between integer-keyed
+                        properties and
                         the length
-                        property. Remember that with Strings there is just the length property!
+                        property. Remember that with <code>Strings</code> there is just the <code>length</code>
+                        property!
                     </li>
                     <li>
-                        Arrays inherit from Array.proptotype, which means they have access to a bunch of convenient
+                        <code>Arrays</code> inherit from <code>Array.prototype</code>, which means they have access to a
+                        bunch of
+                        convenient
                         built in methods to
-                        manipulate arrays. Examples are indexOf(), searching a value in the array, push(), adding an
+                        manipulate arrays. Examples are <code>indexOf()</code>, searching a value in the array,
+                        <code>push()</code>,
+                        adding an
                         element to the
-                        array. This makes Arrays great for representing lists or sets.
+                        array. This makes <code>Arrays</code> great for representing <code>lists</code> or
+                        <code>sets</code>.
                     </li>
                     <li>
-                        Typed Arrays are new to JavaScript in ECMAScript 2015, and are array-like objects that provide a
+                        <code>Typed Arrays</code> are new to JavaScript in <code>ECMAScript 2015</code>, and are
+                        array-like objects
+                        that provide a
                         mechanism for
-                        reading and writing raw binary data in memory buffers.
+                        reading and writing <code>raw binary data</code> in memory buffers.
                     </li>
                 </ul>
             </section>
             <section class="section">
-                <h2>JavaScript Data Structures: Typed Arrays (contd)</h2>
+                <h2>JavaScript Data Structures: <code>Typed Arrays</code> (contd)</h2>
                 <ul>
                     <li>
                         Array objects grow and become smaller dynamically and can have any JavaScript value. JavaScript
@@ -455,7 +521,8 @@
                         things like video and
                         audio manipulations, access to raw data using WebSockets(i.e. for live chat), it became evident
                         that it would be
-                        great to make JavaScript able to quickly and easily manipulate raw binary data. This where typed
+                        great to make JavaScript able to quickly and easily manipulate <code>raw binary data</code>.
+                        This where typed
                         arrays come in.
                     </li>
                     <li>
@@ -469,7 +536,9 @@
             </section>
             <section class="section">
                 <h2>
-                    JavaScript Data Structures: Keyed collections: Maps, Sets, WeakMaps, WeakSets
+                    JavaScript Data Structures: Keyed collections: <code>Maps</code>, <code>Sets</code>,
+                    <code>WeakMaps</code>,
+                    <code>WeakSets</code>
                 </h2>
                 <p>
                     These data structures were introduced in ES6.
@@ -482,9 +551,10 @@
                 </p>
             </section>
             <section class="section">
-                <h2>JavaScript Data Structures: Keyed collections: Maps</h2>
+                <h2>JavaScript Data Structures: <code>Keyed collections</code>: Maps</h2>
                 <p>
-                    The Map object holds key-value pairs and remembers the original order of the keys. Any value,
+                    The <code>Map</code> object holds key-value pairs and remembers the original order of the keys. Any
+                    value,
                     objects or primitives,
                     may be used as either keys or values. Maps are often used in libraries like React as well as vanilla
                     JavaScript.
@@ -499,9 +569,11 @@
                 </aside>
             </section>
             <section class="section">
-                <h2>JavaScript Data Structures: Structured Data: JSON</h2>
+                <h2>JavaScript Data Structures: Structured Data: <code>JSON</code></h2>
                 <p>
-                    We will definitely be using this one. JSON, or JavaScript Object Notation, is a lightweight format
+                    We will definitely be using this one. <code>JSON</code>, or <code>JavaScript Object Notation</code>,
+                    is a
+                    lightweight format
                     for storing and
                     transporting data. It is often used when data is sent from a server to a web page. We will be using
                     it when we get a
@@ -509,9 +581,10 @@
                 </p>
             </section>
             <section>
-                <h2>JavaScript Data Structures - Standard Built-In Objects</h2>
+                <h2>JavaScript Data Structures - Standard <code>Built-In Objects</code></h2>
                 <p>
-                    There are also (quite a few) standard built-in objects in JavaScript, such as Date or Math, for
+                    There are also (quite a few) standard built-in objects in JavaScript, such as <code>Date</code> or
+                    <code>Math</code>, for
                     example. To view a
                     list of standard built-in objects available in JavaScript, please visit <a
                         href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects"
@@ -520,9 +593,10 @@
                 </p>
             </section>
             <section>
-                <h2>Determining Data Types: typeof operator</h2>
-                <p>The typeof operator will tell you what data type you are dealing with. It is a great way to type
-                    check!</p>
+                <h2>Determining Data Types: <code>typeof</code> operator</h2>
+                <p>The <code>typeof</code> operator will tell you what data type you are dealing with. It is a great way
+                    to <code>type
+                        check</code>!</p>
                 <aside class="notes">Go to the MDN page for this and talk about the syntax and parameters. <a
                         href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof">TYPEOF
                         on MDN</a>
