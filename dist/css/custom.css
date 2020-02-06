@@ -33,7 +33,8 @@ strong {
 
 h1.lowercase,
 h2.lowercase,
-h3.lowercase {
+h3.lowercase,
+h4.lowercase {
     text-transform: lowercase;
 }
 
