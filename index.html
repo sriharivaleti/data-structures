@@ -198,6 +198,11 @@ const beyondMaxInt = 9999999999999999;
                 </code></pre>
                     <p>Beyond that,
                     inaccuracy kicks in. And when it comes to decimal points, the max number is 17 before things get imprecise, but that is not always reliable.</p>
+            </section>
+            <section class="section">
+                <h4 class="lowercase"><code>I am in the process of refactoring this section with a deeper explanation
+                        and example</code></h4>
+<p>This ended up being an excellent example of the unpredictability of decimal numbers. But even then, there seems to be a pattern. I will try and demonstrate it within a confine and find out what the pattern is and why it exists. Feel free to try and figure out the pattern too!</p>
                 <pre><code data-javascript>
 const a = 0.24 + 0.24;
                 </code></pre>
@@ -210,7 +215,7 @@ const x = 0.24 + 0.9;
                 <pre><code data-javascript>
 const decPointAddFix = (0.24 * 10 + 0.9 * 10)/10
                 </code></pre>
-                <p><strong>Note</strong>: The first "fix" above (aDecFix) only worka for decimal point numbers which
+                <p><strong>Note</strong>: The first "fix" above (aDecFix) only works for decimal point numbers which
                     when added together are still less than 1. That means the <strong>second computation</strong> does
                     not yield the expected result. In order to <em><strong>round off</strong></em> the decimals to two
                     places for decimals whose
@@ -502,7 +507,7 @@ console.log(typeof(obj));
 				            value. In this course, we will be dealing with the <strong>key</strong> <code>String</code>.
 				        </li>
 				        <li>
-				            <code>Object properties</code> (aka <code>keys©</code>) can be any string, including an empty one.
+				            <code>Object properties</code> (aka <code>keys</code>) can be any string, including an empty one.
 				        </li>
 				        <li>
 				            <code>Property names</code> which are NOT valid <code>identifiers</code> or numbers cannot be
@@ -587,7 +592,7 @@ console.log(unclearPerson[""])
 				    <p><code>Object.defineProperty(obj, prop, descriptor)</code></p>
 				    <p><strong>Parameters:</strong></p>
 				    <p><code>obj</code>: the object on which to define the property</p>
-				    <p><code>prop</code>: the name of Symbol of the property to be defined</p>
+				    <p><code>prop</code>: the name or Symbol of the property to be defined</p>
 				    <p><code>descriptor</code>: the descriptor for the property being defined or modified</p>
 				    <p><code>Return value</code>:</p>
 				    <p><code>The object that was passed to the function</code></p>
