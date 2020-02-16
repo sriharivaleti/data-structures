@@ -200,29 +200,47 @@ const beyondMaxInt = 9999999999999999;
                     inaccuracy kicks in. And when it comes to decimal points, the max number is 17 before things get imprecise, but that is not always reliable.</p>
             </section>
             <section class="section">
-                <h4 class="lowercase"><code>I am in the process of refactoring this section with a deeper explanation
-                        and example</code></h4>
-<p>This ended up being an excellent example of the unpredictability of decimal numbers. But even then, there seems to be a pattern. I will try and demonstrate it within a confine and find out what the pattern is and why it exists. Feel free to try and figure out the pattern too!</p>
+                <h4 class="lowercase"><code>Number</code>: Floating Point Precision (contd)</h4>
+<p>This ended up being an excellent example of the unpredictability of decimal numbers. I decided to go into the Chrome Developer Tools Console, and simply add a slew of decimal numbers to see what happens. I started by adding 0.0 to 0.1 up to 0.8. I got the following back in the Console as a result:</p>
                 <pre><code data-javascript>
-const a = 0.24 + 0.24;
+0.0 + 0.1 // 0.1
                 </code></pre>
+<p><code>0.0</code> added to <code>0.1</code> increments was precise. However, when <code>0.0</code> became
+    <code>0.1</code>,
+        things changed. I got
+    the
+    following back in the Console:</p>
                 <pre><code data-javascript>
-const aDecFix = (0.24 * 10 + 0.24 * 10)/10;
+0.1 + 0.1 // 0.2
+0.1 + 0.2 // 0.30000000000000004
+0.1 + 0.3 // 0.4
+0.1 + 0.4 // 0.5
+0.1 + 0.5 // 0.6
+0.1 + 0.6 // 0.7
+0.1 + 0.7 // 0.7999999999999999
+0.1 + 0.8 // 0.9
+0.2 + 0.1 // 0.30000000000000004
+0.2 + 0.2 // 0.4
+0.2 + 0.3 // 0.5
+0.2 + 0.4 // 0.6000000000000001
+0.2 + 0.5 // 0.7
+0.2 + 0.6 // 0.8
+0.2 + 0.7 // 0.8999999999999999
                 </code></pre>
-                <pre><code data-javacript noescape>
-const x = 0.24 + 0.9;
-                </code></pre>
+                <p>The best way to deal with this anomaly is to multiply the decimal numbers by 10 and then divide by 10:</p>
                 <pre><code data-javascript>
-const decPointAddFix = (0.24 * 10 + 0.9 * 10)/10
+(0.1 * 10 + 0.2 * 10)/10 // 0.3
+(0.1 * 10 + 0.7 * 10)/10 // 0.8
+(0.2 * 10 + 0.1 * 10)/10 // 0.3
+(0.2 * 10 + 0.4 * 10)/10 // 0.6
+(0.2 * 10 + 0.7 * 10)/10 // 0.9
                 </code></pre>
-                <p><strong>Note</strong>: The first "fix" above (aDecFix) only works for decimal point numbers which
-                    when added together are still less than 1. That means the <strong>second computation</strong> does
-                    not yield the expected result. In order to <em><strong>round off</strong></em> the decimals to two
-                    places for decimals whose
-                    value ends up greater than 1 (and no longer simply a decimal number), we can do</p>
-                <pre><code data-javascript noescape>
-decPointAddFix.toFixed(2);
-                </code></pre>
+                <p>takes care of the imprecision issue.</p>
+                </section>
+                <section class="section">
+<h2 class="lowercase"><code>Number</code>: Floating Point Precision (contd)</h2>
+                    <p>In essence, you can't predict ahead of time what kind of outcome you will have with addition because of the plus vs
+                        concatenation issue. You should address it as it comes up, and expect that indeed may come up.</p>
                 </section>
 				<section class="section">
 				    <h2 class="capitalize">Primitive JavaScript Data Types: Number (contd)</h2>
